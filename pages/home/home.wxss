@@ -1,0 +1,11 @@
+/* pages/home/home.wxss */
+@import "postTemplate/postTemplate.wxss";
+
+.swiper_top{
+  width: 750rpx;
+  height:500rpx;
+}
+.slideImg{
+  width:100%;
+  height:100%;
+}

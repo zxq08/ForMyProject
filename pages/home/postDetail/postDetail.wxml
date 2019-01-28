@@ -1,0 +1,21 @@
+<!--pages/home/postDetail/postDetail.wxml-->
+<!-- <text>pages/home/postDetail/postDetail.wxml</text> -->
+<view class="bodyView">
+  <image src="{{detailList.headImgSrc}}" class="post_img"></image>
+  <view class="topView">
+    <image src="{{detailList.avatar_img}}" class="top_avatar_image"></image>
+    <text class="author">{{detailList.author}}</text>
+    <text>发表于</text>
+    <text class="dateTime">{{detailList.dateTime}}</text>
+  </view>
+  <view class="bottomView">
+    <text class="title">{{detailList.post_title}}</text>
+    <view class="collectAndShare">
+      <view class="border"></view>
+      <image bindtap='collected' src="{{collection}}"></image>
+      <image bindtap="shared" src="{{share}}"></image>
+    </view>
+    <text class="detail">{{detailList.detail}}</text>
+    
+  </view>
+</view>

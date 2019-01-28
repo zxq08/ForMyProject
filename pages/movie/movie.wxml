@@ -1,0 +1,5 @@
+<!--pages/movie/movie.wxml-->
+<!-- <text>pages/movie/movie.wxml</text> -->
+<view>
+  <view class="search"></view>
+</view>

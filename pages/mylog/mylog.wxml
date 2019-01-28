@@ -1,0 +1,10 @@
+<!--pages/mylog/mylog.wxml
+<text>pages/mylog/mylog.wxml</text>
+-->
+
+
+<view class='container'>
+  <view>
+    <button>do not clicke me!</button>
+  </view>
+</view>

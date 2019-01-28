@@ -1,27 +1,33 @@
-// pages/myindex/myindex.js
-const helloData = {
-  name: 'WeChat'
-}
+// pages/home/home.js
+var postData = require("../../data/postData.js");
 Page({
+
   /**
    * 页面的初始数据
    */
-  data :{
-    name : 'WeChat',
-    tips : "wx",
-    chips : "qq"
+  data: {
+    "indicatorDots": true,
+    "autoplay": true,
+    "interval": 5000,
+    "duration": 500,
+    "vertical": false,
+    "imgUrls":[
+      "../../images/iqiyi.png",
+      "../../images/vr.png",
+      "../../images/wx.png"
+    ],
+    "mode":'aspectFill'
   },
 
-  changeName(e) {
-    this.setData({
-      name : "MINA"
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      postList: postData.postList
+      
+    });
+    //console.log(this.data.postList);
   },
 
   /**
@@ -71,5 +77,16 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+ /**
+  * 跳转post详情页
+  */
+  postDetail: function(event){
+    var postID = event.currentTarget.id;
+    //console.log(postID);
+    wx.navigateTo({
+      url: 'postDetail/postDetail?id='+postID,
+    })
   }
 })

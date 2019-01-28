@@ -1,0 +1,30 @@
+<!--pages/home/home.wxml <text>pages/home/home.wxml</text>-->
+
+<!-- 是否显示面板指示点   F
+     是否自动切换    F
+     自动切换间隔    5000
+     滑动动画时长    500
+     方向是否为纵向  F
+      -->
+<import src="postTemplate/postTemplate.wxml"/>
+<swiper class="swiper_top"
+   indicator-dots='{{indicatorDots}}' 
+   autoplay='{{autoplay}}'
+   interval='{{interval}}'
+   duration='{{duration}}'
+   vertical='{{vertical}}'>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src='{{item}}' class='slideImg' mode='{{mode}}'></image>
+    </swiper-item>
+  </block> 
+</swiper>
+<block wx:for="{{postList}}" wx:for-item="item">
+  <view id="{{item.post_id}}" bindtap='postDetail'>
+    <template is="postTemplate" data="{{...item}}" >
+    </template>
+  </view>
+  
+</block>
+
+

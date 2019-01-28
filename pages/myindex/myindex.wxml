@@ -1,13 +1,14 @@
 <!--pages/myindex/myindex.wxml-->
 <!--<text>pages/myindex/myindex.wxml</text>
-wx.getLocation({
-      type: 'wgs84',
-      success: function (res) {
-        const latitude = res.latitude //纬度
-        const longitude = res.longitude //经度
-      },
-    })
-     bindmarkertap='markertap'
-    -->
 
-<map longitude="北京经度" latitude='北京纬度'></map>
+     
+    -->
+<view class='container'>
+  <!--<map bindmarkertap='markertap'></map>-->
+
+  <view>Hello {{name}}!</view>
+  <!--<view>Hi {{tips}}</view>-->
+  <!--<view>Ahha {{chips}}</view>-->
+  <button bindtap='changeName'>Click me!</button>
+</view>
+

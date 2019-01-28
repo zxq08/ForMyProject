@@ -1,22 +1,13 @@
-// pages/myindex/myindex.js
-const helloData = {
-  name: 'WeChat'
-}
+// pages/mylog/mylog.js
 Page({
+
   /**
    * 页面的初始数据
    */
-  data :{
-    name : 'WeChat',
-    tips : "wx",
-    chips : "qq"
+  data: {
+
   },
 
-  changeName(e) {
-    this.setData({
-      name : "MINA"
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
