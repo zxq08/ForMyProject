@@ -1,5 +1,17 @@
 <!--pages/movie/movie.wxml-->
 <!-- <text>pages/movie/movie.wxml</text> -->
 <view>
-  <view class="search"></view>
+  <view class="search">
+  <icon type="search" size='15' color='#666'></icon>
+  <input type='text' placeholder='请输入电影关键字' placeholder-style='font-size:26rpx'></input>
+  <image src="../../images/icon/xx.png"></image></view>
+</view>
+<view>
+  <swiper>
+    <block wx:for="{{}}">
+      <swiper-item>
+        <import src="movieTemplate/movieTemplate.wxml"/>
+      </swiper-item>
+    </block>
+  </swiper>  
 </view>
